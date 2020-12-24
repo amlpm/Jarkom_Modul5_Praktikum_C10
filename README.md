@@ -72,7 +72,8 @@ Kami menggunakan metode VLSM, dan berikut adalah gambar pembagian subnet, pohon 
 
 - Table IP
 
-![Pembagian IP](https://user-images.githubusercontent.com/57977401/103074513-b545dc00-4604-11eb-97db-a72143b6337c.png)
+![Pembagian IP](https://user-images.githubusercontent.com/57977401/103096596-68cbc200-463f-11eb-9499-cf87a32ff23c.png)
+
 <br>
 
 Sehingga didapat IP tiap UML adalah sebagai berikut:
