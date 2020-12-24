@@ -264,7 +264,7 @@ Jawab : <br>
 2. Lalu install dhcp dengan perintah ```apt-get install isc-dhcp-server```
 3. Buka file ```nano /etc/default/isc-dhcp-server```
 4. Masukkan INTERFACES="eth0"
-5. nano /etc/dhcp/dhcpd.conf
+5. Buka file dengan perintah ```nano /etc/dhcp/dhcpd.conf```
 6. Masukkan
 ```
 subnet 10.151.77.88 netmask 255.255.255.248 {
@@ -290,8 +290,7 @@ subnet 192.168.1.0 netmask 255.255.255.0 {
 }
 ```
 7. Lakukan restart dengan ```service isc-dhcp-server restart```<br>
-
-- UML GRESIK dan SIDOARJO
+8. Masukkan pada UML GRESIK dan SIDOARJO konfigurasi dibawah
 ```
 auto lo
 iface lo inet loopback
