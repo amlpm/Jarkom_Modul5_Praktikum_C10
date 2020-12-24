@@ -78,10 +78,10 @@ Kami menggunakan metode VLSM, dan berikut adalah gambar pembagian subnet, pohon 
 Sehingga didapat IP tiap UML adalah sebagai berikut:
 ```
 Malang	    10.151.77.90
-Mojokerto	10.151.77.91
+Mojokerto   10.151.77.91
 Batu	    192.168.2.2
-Sidoarjo	192.168.0.2
-Surabaya	10.151.76.46
+Sidoarjo    192.168.0.2
+Surabaya    10.151.76.46
 Kediri	    192.168.2.6
 Gresik	    192.168.1.2
 Madiun	    192.168.2.10
