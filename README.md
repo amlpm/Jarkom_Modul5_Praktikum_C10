@@ -14,10 +14,9 @@
 5. [Soal 1](#Soal1)
 6. [Soal 2](#Soal2)
 7. [Soal 3](#Soal3)
-8. [Soal 4](#Soal4)
-9. [Soal 5](#Soal5)
-10. [Soal 6](#Soal6)
-11. [Soal 7](#Soal7)
+8. [Soal 4 dan 5](#Soal4&5)
+9. [Soal 6](#Soal6)
+10. [Soal 7](#Soal7)
 #
 
 
@@ -370,11 +369,13 @@ dengan menggunakan chain INPUT setiap paket dengan protokol icmp akan dibatasi u
 
 <br><br><br>
 
-# Soal4
+# Soal4&5
+### Soal 4
 #### Akses dari subnet SIDOARJO hanya diperbolehkan pada pukul 07.00 - 17.00 pada hari Senin sampai Jumat. Selain itu paket akan di REJECT.
-
-# Soal5
+#
+### Soal 5
 #### Akses dari subnet GRESIK hanya diperbolehkan pada pukul 17.00 hingga pukul 07.00 setiap harinya. Selain itu paket akan di REJECT.
+#
 
 Jawab : <br>
 Pada UML MALANG
