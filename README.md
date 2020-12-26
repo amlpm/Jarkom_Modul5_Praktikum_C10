@@ -285,7 +285,7 @@ subnet 192.168.1.0 netmask 255.255.255.0 {
     range 192.168.1.2 192.168.1.254;
     option routers 192.168.1.1;
     option broadcast-address 192.168.1.255;
-    option domain-name-servers 10.151.77.90;
+    option domain-name-servers 10.151.77.90, 202.46.129.2;
     default-lease-time 600;
     max-lease-time 7200;
 }
@@ -326,20 +326,22 @@ dengan menggunakan table nat chain POSTROUTING melalui eth0, setiap paket yang m
 Jawab : <br>
 Pada UML Surabaya, ketikkan perintah seperti dibawah
 ```
-iptables -A FORWARD -p tcp -s 10.151.0.0/16 --dport 22 -d 10.151.77.89/29 -j DROP
+iptables -A FORWARD -p tcp -i eth0 --dport 22 -d 10.151.77.88/29 -j DROP
 ```
 
 Penjelasan : <br>
-pada UML SURABAYA dibuat iptables dengan chain FORWARD, setiap paket dengan protokol tcp dengan source dari subnet ip DMZ yaitu 10.151.0.0/16 dan port tujuan 22 serta subnet tujuan 10.151.77.89/29 akan didrop
+pada UML SURABAYA dibuat iptables dengan chain FORWARD, setiap paket dengan protokol tcp, incoming interface eth0 9dari luar), dan port tujuan 22 serta subnet tujuan 10.151.77.89/29 akan didrop
 
 - **Testing**
 1. Lakukan ```apt-get update```
-2. Install netcat dengan perintah ```apt-get install netcat```
-3. pada UML SURABAYA, ketikkan ```nc 10.151.77.88 22```
-4. Pada UML MALANG dan MOJOKERTO, ketikkan perintah ```nc -l -p 22``` dan ```nc 10.151.77.88 22```
-5. Apabila hasilnya seperti dibawah, maka konfigurasi berhasil
+2. Install netcat pada seluruh UML dengan perintah ```apt-get install netcat```
+3. pada UML SURABAYA, ketikkan ```nc 10.151.77.90 22```
+4. Pada UML MALANG dan MOJOKERTO, ketikkan perintah ```nc -l -p 22```
+5. Ketikkan sesuatu 
+6. Apabila hasilnya seperti dibawah, maka konfigurasi berhasil
 
-![No2](https://user-images.githubusercontent.com/57977401/103081363-c7c71200-4612-11eb-9c56-cc7d340f4a58.png)
+![No2](https://user-images.githubusercontent.com/57977401/103155653-b2054880-47dc-11eb-8cea-d2171dfe08cb.png)
+
 <br><br><br>
 
 # Soal3
@@ -405,6 +407,15 @@ Penjelasan : <br>
 Menggunakan chain PREORUTING dan table nat , setiap paket yang menuju  dns server dengan protocol tcp dan port tujuan 80 akan didistribusikan masing masing ke 192.168.2.10:80 (MADIUN) dan 192.168.2.11:80(PROBOLINGGO)
 
 - **Testing**
+1. Lakukan ```apt-get update```
+2. Install netcat pada seluruh UML dengan perintah ```apt-get install netcat```
+3. pada Putty Yudhistira, ketikkan ```nc 10.151.77.90 22```
+4. Pada UML MADIUN dan PROBOLINGGO, ketikkan perintah ```nc -l -p 22```
+5. Ketikkan sesuatu 
+6. Apabila hasilnya seperti dibawah (gantian antar MADIUN dan PROBOLINGGO), maka konfigurasi berhasil
+
+![No6](https://user-images.githubusercontent.com/57977401/103155651-af0a5800-47dc-11eb-8854-f62884c87941.png)
+
 <br><br><br>
 
 # Soal7
