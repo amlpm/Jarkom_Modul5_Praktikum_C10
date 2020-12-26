@@ -268,10 +268,6 @@ Jawab : <br>
 5. Buka file dengan perintah ```nano /etc/dhcp/dhcpd.conf```
 6. Masukkan
 ```
-subnet 10.151.77.88 netmask 255.255.255.248 {
-	option routers 10.151.77.89;
-}
-
 subnet 192.168.0.0 netmask 255.255.255.0 {
     range 192.168.0.2 192.168.0.254;
     option routers 192.168.0.1;
@@ -288,6 +284,10 @@ subnet 192.168.1.0 netmask 255.255.255.0 {
     option domain-name-servers 10.151.77.90, 202.46.129.2;
     default-lease-time 600;
     max-lease-time 7200;
+}
+
+subnet 10.151.77.88 netmask 255.255.255.248 {
+
 }
 ```
 7. Lakukan restart dengan ```service isc-dhcp-server restart```<br>
@@ -359,6 +359,15 @@ dengan menggunakan chain INPUT setiap paket dengan protokol icmp akan dibatasi u
 - **Testing**
 1. Lakukan ping ke IP MALANG (10.151.77.90) atau IP MOJOKERTO (10.151.77.91) di 4 UML (Misalkan UML BATU, KEDIRI, MADIUN dan PROBOLINGGO)
 2. Apabila hasilnya seperti dibawah, maka konfigurasi berhasil
+
+**Ping ke IP MALANG (10.151.77.90)**
+
+![No3 Malang](https://user-images.githubusercontent.com/57977401/103156056-eb8b8300-47df-11eb-93c7-5d6e67f8efc4.png)
+
+**Ping ke IP MOJOKERTO (10.151.77.91)**
+
+![No3 Mojokerto](https://user-images.githubusercontent.com/57977401/103156058-ec241980-47df-11eb-8691-2db8b41e986d.png)
+
 <br><br><br>
 
 # Soal4
