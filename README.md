@@ -14,7 +14,7 @@
 5. [Soal 1](#Soal1)
 6. [Soal 2](#Soal2)
 7. [Soal 3](#Soal3)
-8. [Soal 4 dan 5](#Soal4&5)
+8. [Soal 4 dan 5](#Soal4_Soal5)
 9. [Soal 6](#Soal6)
 10. [Soal 7](#Soal7)
 #
@@ -369,7 +369,7 @@ dengan menggunakan chain INPUT setiap paket dengan protokol icmp akan dibatasi u
 
 <br><br><br>
 
-# Soal4&5
+# Soal4_Soal5
 ### Soal 4
 #### Akses dari subnet SIDOARJO hanya diperbolehkan pada pukul 07.00 - 17.00 pada hari Senin sampai Jumat. Selain itu paket akan di REJECT.
 #
